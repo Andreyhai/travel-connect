@@ -1,0 +1,95 @@
+/* Общие стили для хедера */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #004d7a;
+    color: white;
+    position: relative;
+  }
+  
+  .logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  .logo p {
+    font-size: 1rem;
+    margin: 0;
+    font-style: italic;
+  }
+  
+  /* Навигация */
+  .nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    margin: 0 20px;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Гамбургер меню */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  /* Мобильная версия */
+  @media (max-width: 768px) {
+    .nav {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: #004d7a;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease;
+    }
+  
+    .nav.open {
+      height: 200px;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .nav li {
+      margin: 15px 0;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav a {
+      font-size: 1.2rem;
+    }
+  }
+  

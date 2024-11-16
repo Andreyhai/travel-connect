@@ -1,0 +1,144 @@
+/* Общие стили для блока услуг */
+.services-carousel {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.5s ease; /* Плавный переход фона */
+}
+
+.services-carousel .carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  perspective: 1200px; /* Добавляем 3D перспективу */
+}
+
+/* Стрелки для навигации */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-arrow.prev {
+  left: 10px;
+}
+
+.carousel-arrow.next {
+  right: 10px;
+}
+
+/* Контейнер для карточек */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d; /* Для 3D эффекта */
+}
+
+/* Стили для каждой карточки */
+.service-card {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.5s ease;
+  transform-origin: center;
+  opacity: 0.8;
+  z-index: 1;
+  transform: rotateY(0deg) scale(0.9); /* Начальный 3D эффект */
+}
+
+.service-card.active {
+  transform: rotateY(0deg) scale(1.1); /* Карточка в центре */
+  opacity: 1;
+  z-index: 3;
+}
+
+.service-card.next,
+.service-card.prev {
+  transform: rotateY(45deg) scale(0.8); /* 3D вращение для смещенных карточек */
+  opacity: 0.6;
+}
+
+/* Размещение карточек */
+.cards .service-card {
+  transform: translateX(-50%);
+}
+
+.service-card .card-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #004d7a;
+}
+
+.service-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  color: #004d7a;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #004d7a;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #006a9b;
+}
+
+/* Адаптивность для мобильных экранов */
+@media (max-width: 768px) {
+  .service-card {
+    width: 200px;
+    height: 300px;
+  }
+  .carousel-arrow {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+}
