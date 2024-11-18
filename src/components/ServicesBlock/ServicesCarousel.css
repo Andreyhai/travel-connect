@@ -88,6 +88,7 @@
 /* Размещение карточек */
 .cards .service-card {
   transform: translateX(-50%);
+  height: auto;
 }
 
 .service-card .card-icon {
@@ -98,7 +99,7 @@
 
 .service-card img {
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 20px;

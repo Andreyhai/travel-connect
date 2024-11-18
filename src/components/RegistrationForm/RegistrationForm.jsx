@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { registerUser } from "../../firebase"; // Импортируйте функцию регистрации
 import './RegistrationForm.css'; // Подключаем CSS для стилизации
 
 const RegistrationForm = () => {
@@ -17,6 +18,10 @@ const RegistrationForm = () => {
     }));
   };
 
+  useEffect(() => {
+    console.log(formData)
+  }, [formData])
+
   const validate = () => {
     const newErrors = {};
     if (!formData.name) newErrors.name = 'Имя обязательно';
@@ -32,6 +37,8 @@ const RegistrationForm = () => {
     return newErrors;
   };
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validate();
@@ -40,7 +47,17 @@ const RegistrationForm = () => {
     if (Object.keys(validationErrors).length === 0) {
       // Здесь можно отправить данные на сервер или выполнить другие действия
       console.log('Форма отправлена', formData);
+      try {
+        const user = registerUser(formData.email, formData.password);
+        alert("Пользователь зарегистрирован:", user);
+        // Перенаправление или другие действия после успешной регистрации
+      } catch (error) {
+        alert(error.message); // Установка сообщения об ошибке
+      }
+    } else {
+      alert('Проверьте правильность заполнения формы');
     }
+
   };
 
   return (

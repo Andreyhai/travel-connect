@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-content">
         {/* Секция о компании */}
         <div className="footer-section">
-          <h3>TravelConnect</h3>
+          <h3>TripConnect</h3>
           <p>Найди попутчиков для своих путешествий и отправляйся в путь с новыми друзьями!</p>
         </div>
 
@@ -26,24 +26,24 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Следите за нами</h4>
           <div className="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">VK</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Teams</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Contacts</a>
           </div>
         </div>
 
         {/* Контакты */}
         <div className="footer-section">
           <h4>Контакты</h4>
-          <p>Email: <a href="mailto:support@travelconnect.com">support@travelconnect.com</a></p>
+          <p>Email: <a href="mailto:support@travelconnect.com">support@tripconnect.com</a></p>
           <p>Телефон: +7 (123) 456-78-90</p>
         </div>
       </div>
 
       {/* Нижний бар с авторскими правами */}
       <div className="footer-bottom">
-        <p>&copy; 2024 TravelConnect. Все права защищены.</p>
+        <p>&copy; 2024 TripConnect. Все права защищены.</p>
       </div>
     </footer>
   );

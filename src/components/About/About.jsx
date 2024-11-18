@@ -1,9 +1,9 @@
 import React from 'react';
 import './About.css'; // Подключаем CSS файл для стилизации
 import jpg from '../../assets/images/image.png'
-const About = () => {
+const About = React.forwardRef(({ref}) => {
   return (
-    <section className="about">
+    <section className="about" ref={ref}>
       <div className="about-content">
         <h2>О нас</h2>
         <p>
@@ -26,6 +26,6 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
 
 export default About;

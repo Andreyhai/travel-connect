@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #004d7a; /* Цвет фона */
+    border-bottom: 1px solid #e0e0e0; /* Нижняя граница */
+    
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px; /* Ширина аватарки */
+    height: 50px; /* Высота аватарки */
+    border-radius: 50%; /* Круглая форма аватарки */
+    margin-right: 10px; /* Отступ справа */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+}
+
+.user-name {
+    margin: 0; /* Убираем отступы */
+    font-size: 18px; /* Размер шрифта имени */
+}
+
+.header-right {
+    text-align: right; /* Выравнивание текста вправо */
+    margin-right: 50px;
+}
+
+.contact-info {
+    margin: 0; /* Убираем отступы */
+    font-size: 14px; /* Размер шрифта контактной информации */
+    color: #fff; /* Цвет текста */
+}

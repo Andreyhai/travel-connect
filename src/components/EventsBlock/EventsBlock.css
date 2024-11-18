@@ -1,0 +1,67 @@
+.events-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.events-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    min-height: 200px;
+}
+
+.event-heading {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.event-description {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.event-date {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.reviews {
+    margin-top: 15px;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-review {
+    font-size: 0.9em;
+}

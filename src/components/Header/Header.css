@@ -6,9 +6,16 @@
     padding: 20px;
     background-color: #004d7a;
     color: white;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
   }
   
+  .logo {
+    cursor: pointer;
+  }
+
   .logo h1 {
     font-size: 1.8rem;
     margin: 0;
@@ -35,7 +42,7 @@
   .nav a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   
   .nav a:hover {
@@ -56,9 +63,15 @@
     background-color: white;
     border-radius: 5px;
   }
+
+  .login {
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-right: 50px;
+  }
   
   /* Мобильная версия */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .nav {
       position: absolute;
       top: 70px;
@@ -86,10 +99,15 @@
   
     .hamburger {
       display: flex;
+      margin-right: 50px;
     }
   
     .nav a {
       font-size: 1.2rem;
+    }
+
+    .login {
+      display: none
     }
   }
   

@@ -1,0 +1,59 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 700px; /* Высота карусели */
+    display: flex; /* Используем flexbox для размещения элементов */
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Используем flexbox для внутреннего распределения */
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-image {
+    flex: 1; /* Занимает половину ширины */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Фон для описания */
+
+}
+
+.carousel-image img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover; /* Масштабирование изображения */
+    transition: transform 0.5s ease; /* Добавляем плавное масштабирование */
+    border-radius: 15px;
+}
+
+.carousel-image img:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+.carousel-description {
+    flex: 1; /* Занимает вторую половину ширины */
+    padding: 20px;
+    background-color: #f0f0f0; /* Фон для описания */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.carousel-description p {
+    width: 80%;
+    margin: 0 auto;
+}
